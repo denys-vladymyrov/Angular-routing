@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
 import { TasksComponent } from "./tasks/tasks.component";
 import { NoTaskComponent } from "./tasks/no-task/no-task.component";
-import {resolveUserName, UserTasksComponent} from "./users/user-tasks/user-tasks.component";
+import {resolveTitle, resolveUserName, UserTasksComponent} from "./users/user-tasks/user-tasks.component";
 import { NewTaskComponent } from './tasks/new-task/new-task.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: NoTaskComponent
+    component: NoTaskComponent,
+    title: 'No task selected'
   },
   {
     path: 'users/:userId',      // <your-domain>/users/<uid>
@@ -19,6 +20,7 @@ export const routes: Routes = [
     resolve: {
       userName: resolveUserName //
     },
+    title: resolveTitle,
     children: [
       {
         path: '',
