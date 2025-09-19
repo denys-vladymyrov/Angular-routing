@@ -64,7 +64,8 @@
               "buildTarget": "routing:build:production"
             },
             "development": {
-              "buildTarget": "routing:build:development"
+              "buildTarget": "routing:build:development",
+              "port": 5200
             }
           },
           "defaultConfiguration": "development"
@@ -94,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
