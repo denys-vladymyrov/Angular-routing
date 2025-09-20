@@ -1,7 +1,6 @@
 import {Component, computed, DestroyRef, inject, input, OnInit, signal} from '@angular/core';
 
 import { TaskComponent } from './task/task.component';
-import { Task } from './task/task.model';
 import {TasksService} from './tasks.service';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
